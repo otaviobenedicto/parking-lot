@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    margin: 2rem auto;
+    background-image: url('../_imgs/back-parking.jpg.crdownload');
+    background-size: cover;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #eee;
+    padding: 0.7rem;
+}
+
+main {
+    position: absolute;
+    left: 35%;
+    display: none;
+    animation: showMain 0.75s;
+}
+
+@keyframes showMain {
+    from {
+        transform: translateX(40%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+
+}
+
+input,
+button {
+    width: 98%;
+    padding: 0.6rem 0.4rem;
+    margin: 0.4rem;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.success {
+    background-color: rgb(54, 80, 231);
+    color: rgb(255, 255, 255);
+}
+
+.success:hover {
+    background-color: rgb(209, 208, 208);
+    color: rgb(54, 80, 231);
+}
+
+.delete {
+    background-color: rgb(231, 54, 54);
+    color: rgb(255, 255, 255);
+}
+
+.delete:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(231, 54, 54);
+    border: 1px solid rgb(231, 54, 54);
+    transform: scale(1.05);
+}
+
+
+table {
+    background-color: #eee;
+    margin-top: .9rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 5px 25px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/*----------------PARKING LOT-----------------*/
+
+section#parkingArea {
+    height: 80vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section#parkingArea > div{
+    cursor: pointer;
+    margin: 0 5px;
+    height: 40%;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/*----------------PARKING LOT-----------------*/
